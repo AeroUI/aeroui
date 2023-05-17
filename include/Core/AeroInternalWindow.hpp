@@ -43,8 +43,8 @@
 namespace AeroUI {
 
 class AeroInternalWindow {
-private:
-    // Private variables
+protected:
+    AUIui __window_id = 0;
 protected:
     AeroInternalWindow();
     ~AeroInternalWindow();
@@ -55,6 +55,7 @@ protected:
     // Protected methods
 public:
     // Public methods
+    const AUIui get_window_id() const noexcept;
 };
 
 }
