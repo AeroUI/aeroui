@@ -12,6 +12,6 @@
 #ifndef __INCLUDE_AERO_TYPES_HPP__
 #define __INCLUDE_AERO_TYPES_HPP__
 
-#define AIui unsigned int
+#define AUIui unsigned int
 
 #endif /* __INCLUDE_AERO_TYPES_HPP__ */
