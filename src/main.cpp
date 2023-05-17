@@ -1,8 +1,10 @@
-#define GL_SILENCE_DEPRECATION
+//#define GL_SILENCE_DEPRECATION
 #define GLEW_STATIC
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
+#include "../include/core/window.hpp"
 
 #include <iostream>
 

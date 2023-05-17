@@ -40,7 +40,7 @@
 
 namespace AeroUI {
 
-class AeroInternalWindow;
+class AeroInternalWindow; // TODO: Define this class in another file (AeroInternalWindow.hpp)
 
 class AeroWindow final : public AeroInternalWindow { };
 
