@@ -9,7 +9,8 @@
  * 
  */
 
-#pragma once
+#ifndef __INCLUDE_VECTOR_HPP__
+#define __INCLUDE_VECTOR_HPP__
 
 namespace AeroUI {
 class json;
@@ -29,3 +30,5 @@ public:
 
 };
 }
+
+#endif /* __INCLUDE_VECTOR_HPP__ */

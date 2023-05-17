@@ -1,7 +1,7 @@
 /**
- * @file window.hpp
+ * @file AeroInternalWindow.hpp
  * @author Mustafa Malik
- * @brief windowing
+ * @brief 
  * @version 0.1
  * @date 2023-05-17
  * 
@@ -9,16 +9,18 @@
  * 
  */
 
-#ifndef __INCLUDE_CORE_WINDOW_HPP__
-#define __INCLUDE_CORE_WINDOW_HPP__
+#ifndef __INCLUDE_CORE_AEROWINDOW_HPP__
+#define __INCLUDE_CORE_AEROWINDOW_HPP__
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "AeroTypes.hpp"
+
 #ifdef AUI_NO_DEPRECATION
 #   define GL_SILENCE_DEPRECATION
 #else
-#   warning Warning Deprecations may appear, to silence, define AUI_NO_DEPRECATION
+#   warning Deprecations warnings may appear, to silence, define AUI_NO_DEPRECATION
 #endif
 
 #ifdef AUI_DEBUG_MODE
@@ -40,10 +42,21 @@
 
 namespace AeroUI {
 
-class AeroInternalWindow; // TODO: Define this class in another file (AeroInternalWindow.hpp)
-
-class AeroWindow final : public AeroInternalWindow { };
+class AeroInternalWindow {
+private:
+    // Private variables
+protected:
+    AeroInternalWindow();
+    ~AeroInternalWindow();
+    
+    AeroInternalWindow(AeroInternalWindow&);
+    AeroInternalWindow operator= (AeroInternalWindow&);
+protected:
+    // Protected methods
+public:
+    // Public methods
+};
 
 }
 
-#endif /* __INCLUDE_CORE_WINDOW_HPP__ */
+#endif /* __INCLUDE_CORE_AEROWINDOW_HPP__ */

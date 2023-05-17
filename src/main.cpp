@@ -1,10 +1,8 @@
 //#define GL_SILENCE_DEPRECATION
 #define GLEW_STATIC
+#define AUI_NO_DEPRECATION
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-
-#include "../include/core/window.hpp"
+#include "Core/AeroWindow.hpp"
 
 #include <iostream>
 
