@@ -38,9 +38,9 @@ enum class AeroInputTypes {
 };
 
 enum class AeroActionType {
-    PRESS,
-    RELEASE,
-    REPEAT,
+    AERO_PRESS,
+    AERO_RELEASE,
+    AERO_REPEAT,
 };
 
 struct AeroInputResult {

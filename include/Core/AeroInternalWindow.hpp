@@ -43,6 +43,8 @@
 
 namespace AeroUI {
 
+// TODO: Requires documentation
+
 class AeroInternalWindow {
 protected:
     AUIui __window_id = 0;
@@ -67,17 +69,19 @@ public:
     bool operator != (const AeroInternalWindow&);
 public:
     // Public methods
-    const AUIui get_window_id() const noexcept;
-    const AeroInternalWindow get_window() const noexcept;
+    const AUIui aero_get_window_id() const noexcept;
+    const AeroInternalWindow aero_get_window() const noexcept;
 
-    const vector get_window_pos() const noexcept;
-    const vector get_window_size() const noexcept;
+    const vector aero_get_window_pos() const noexcept;
+    const vector aero_get_window_size() const noexcept;
 
-    const int get_x_pos() const noexcept;
-    const int get_y_pos() const noexcept;
+    const int aero_get_x_pos() const noexcept;
+    const int aero_get_y_pos() const noexcept;
 
-    const int get_window_width() const noexcept;
-    const int get_window_height() const noexcept;
+    const int aero_get_window_width() const noexcept;
+    const int aero_get_window_height() const noexcept;
+
+    const bool aero_load_theme(const char*); // load from file (e.g THEME.aui)
 };
 
 }
