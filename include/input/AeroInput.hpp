@@ -61,6 +61,7 @@ public:
      * @param int scancode - unique identifier for a key
      * @param int action - The action triggered from the key
      * @param int mods - extras
+     * @note void* will be automatically casted to a `AeroInternalWindow`
      */
     void aero_set_input_cb(std::function<void(void*, int, int, int, int)>) noexcept;
 

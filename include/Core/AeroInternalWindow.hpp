@@ -46,6 +46,7 @@ namespace AeroUI {
 class AeroInternalWindow {
 protected:
     AUIui __window_id = 0;
+    bool __polling = false;
 protected:
     AeroInternalWindow();
     ~AeroInternalWindow();
@@ -57,8 +58,9 @@ protected:
     bool aero_init_window(const int&, const int&, const char*);
     bool aero_set_window_icon(); // TODO: NEEDS KRISH'S IMAGE CODE
     bool aero_should_close() const;
+    void aero_close_window() const noexcept;
     // Input system
-    /* REQUIRES CUSTOM INPUT TYPE */ void aero_poll_all() noexcept;
+    void aero_poll_all() noexcept;
 public:
     // Public operator methods
     bool operator == (const AeroInternalWindow&);
