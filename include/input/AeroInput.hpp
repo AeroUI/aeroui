@@ -62,7 +62,7 @@ public:
      * @param int action - The action triggered from the key
      * @param int mods - extras
      */
-    `void aero_set_input_cb(std::function<void(void*, int, int, int, int)>) noexcept;
+    void aero_set_input_cb(std::function<void(void*, int, int, int, int)>) noexcept;
 
 };
 
