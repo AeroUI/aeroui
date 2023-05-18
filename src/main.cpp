@@ -29,7 +29,7 @@ int main(void) {
 
         glfwPollEvents();
 
-        if ((glfwGetKey(window, (int) AeroUI::AeroKeyCodes::AERO_KEY_E)) == GLFW_PRESS) {
+        if ((glfwGetKey(window, static_cast<int>(AeroUI::AeroKeyCodes::AERO_KEY_E))) == GLFW_PRESS) {
             std::cout << "pressed\n";
         }
     }
