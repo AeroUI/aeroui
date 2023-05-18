@@ -9,7 +9,8 @@
  * 
  */
 
-#pragma once
+#ifndef __INCLUDE_COLORS_HPP__
+#define __INCLUDE_COLORS_HPP__
 
 #include <cstdint>
 
@@ -56,6 +57,8 @@ public:
      */
     bool operator==(const color& other) const;
     bool operator!=(const color& other) const;
-}
+};
 
 }
+
+#endif
