@@ -75,6 +75,6 @@ public:
 
     AeroActionType aero_get_action(const int&) noexcept;
 };
-}̀
+}
 
 #endif /* __INCLUDE_AERO_INPUT_HPP__ */

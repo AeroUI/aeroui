@@ -3,7 +3,7 @@
 #define AUI_NO_DEPRECATION
 
 #include "Core/AeroWindow.hpp"
-#include "input/AeroInput.hpp"
+#include "Input/AeroInput.hpp"
 
 #include <iostream>
 
@@ -28,6 +28,10 @@ int main(void) {
         glfwSwapBuffers(window);
 
         glfwPollEvents();
+
+        if ((glfwGetKey(window, (int) AeroUI::AeroKeyCodes::AERO_KEY_E)) == GLFW_PRESS) {
+            std::cout << "pressed\n";
+        }
     }
 
     glfwTerminate();
