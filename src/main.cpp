@@ -3,6 +3,7 @@
 #define AUI_NO_DEPRECATION
 
 #include "Core/AeroWindow.hpp"
+#include "input/AeroInput.hpp"
 
 #include <iostream>
 

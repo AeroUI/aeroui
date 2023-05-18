@@ -10,6 +10,7 @@
  */
 
 #include <functional>
+#include "AeroInputTypes.hpp"
 
 #ifndef __INCLUDE_AERO_INPUT_HPP__
 #define __INCLUDE_AERO_INPUT_HPP__
@@ -36,6 +37,12 @@ enum class AeroInputTypes {
 
 };
 
+enum class AeroActionType {
+    PRESS,
+    RELEASE,
+    REPEAT,
+};
+
 struct AeroInputResult {
     AeroInputTypes input_type;
     int code;
@@ -49,7 +56,6 @@ public:
 private:
     AeroInputControl() = delete;
     ~AeroInputControl() = delete;
-};
 public:
     struct AeroInputResult aero_is_key_input() noexcept;
     struct AeroInputResult aero_is_mouse_input() noexcept;
@@ -65,6 +71,10 @@ public:
      */
     void aero_set_input_cb(std::function<void(void*, int, int, int, int)>) noexcept;
 
+    AeroInputTypes aero_get_key(const int&) noexcept;
+
+    AeroActionType aero_get_action(const int&) noexcept;
 };
+}̀
 
 #endif /* __INCLUDE_AERO_INPUT_HPP__ */

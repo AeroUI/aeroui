@@ -51,7 +51,7 @@ protected:
     AeroInternalWindow();
     ~AeroInternalWindow();
     
-    AeroInternalWindow(AeroInternalWindow);
+    AeroInternalWindow(AeroInternalWindow&);
     AeroInternalWindow operator = (AeroInternalWindow);
 protected:
     // Window system
