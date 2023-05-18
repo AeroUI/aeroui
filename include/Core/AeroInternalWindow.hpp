@@ -16,6 +16,7 @@
 #include <GLFW/glfw3.h>
 
 #include "AeroTypes.hpp"
+#include "vector.hpp"
 
 #ifdef AUI_NO_DEPRECATION
 #   define GL_SILENCE_DEPRECATION
@@ -49,13 +50,23 @@ protected:
     AeroInternalWindow();
     ~AeroInternalWindow();
     
-    AeroInternalWindow(AeroInternalWindow&);
-    AeroInternalWindow operator= (AeroInternalWindow&);
+    AeroInternalWindow(AeroInternalWindow);
+    AeroInternalWindow operator = (AeroInternalWindow);
 protected:
     // Protected methods
 public:
+    // Public operator methods
+    bool operator == (const AeroInternalWindow&);
+    bool operator != (const AeroInternalWindow&);
+public:
     // Public methods
     const AUIui get_window_id() const noexcept;
+    const AeroInternalWindow get_window() const noexcept;
+
+    const vector get_window_pos() const noexcept;
+
+    const AUIui get_x_pos() const noexcept;
+    const AUIui get_y_pos() const noexcept;
 };
 
 }
