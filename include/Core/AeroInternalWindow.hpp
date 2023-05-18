@@ -53,7 +53,12 @@ protected:
     AeroInternalWindow(AeroInternalWindow);
     AeroInternalWindow operator = (AeroInternalWindow);
 protected:
-    // Protected methods
+    // Window system
+    bool aero_init_window(const int&, const int&, const char*);
+    bool aero_set_window_icon(); // TODO: NEEDS KRISH'S IMAGE CODE
+    bool aero_should_close() const;
+    // Input system
+    /* REQUIRES CUSTOM INPUT TYPE */ void aero_poll_all() noexcept;
 public:
     // Public operator methods
     bool operator == (const AeroInternalWindow&);
@@ -64,9 +69,13 @@ public:
     const AeroInternalWindow get_window() const noexcept;
 
     const vector get_window_pos() const noexcept;
+    const vector get_window_size() const noexcept;
 
-    const AUIui get_x_pos() const noexcept;
-    const AUIui get_y_pos() const noexcept;
+    const int get_x_pos() const noexcept;
+    const int get_y_pos() const noexcept;
+
+    const int get_window_width() const noexcept;
+    const int get_window_height() const noexcept;
 };
 
 }
