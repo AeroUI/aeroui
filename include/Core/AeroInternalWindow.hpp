@@ -63,6 +63,9 @@ protected:
     void aero_close_window() const noexcept;
     // Input system
     void aero_poll_all() noexcept;
+    // Security Handler
+    const bool aero_request_calls() noexcept;
+    const bool aero_check_all() noexcept;
 public:
     // Public operator methods
     bool operator == (const AeroInternalWindow&);
