@@ -12,7 +12,7 @@
 #ifndef __INCLUDE_ICONS_HPP__
 #define __INCLUDE_ICONS_HPP__
 
-#include "rect.hpp"
+#include "AeroRect.hpp"
 #include <cstdint>
 #include <memory>
 #include <string>
