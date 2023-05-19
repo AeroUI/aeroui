@@ -60,8 +60,9 @@ protected:
     // Window system
     bool aero_init_window(const int&, const int&, const char*);
     bool aero_set_window_icon(); // TODO: NEEDS KRISH'S IMAGE CODE
-    bool aero_should_close() const;
+    bool aero_should_close() const; 
     void aero_close_window() const noexcept;
+    void aero_set_close_handler(void*) noexcept;
     // Input system
     void aero_poll_all() noexcept;
     // Security Handler

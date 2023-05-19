@@ -12,6 +12,8 @@
 #ifndef __INCLUDE_AERO_INPUT_TYPES_HPP__
 #define __INCLUDE_AERO_INPUT_TYPES_HPP__
 
+#include <string>
+
 namespace AeroUI {
 enum class AeroKeyCodes {
     AERO_KEY_SPACE = 32,
