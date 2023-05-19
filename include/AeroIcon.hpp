@@ -34,9 +34,15 @@ public:
         ArrowUp,
         ArrowDown,
         Check,
-        Max,
+        Expand,
+        Collapse,
+        Plus,
         Minus,
         Close,
+        Minimize,
+        Maximize,
+        Restore,
+        Max
     };
 
     /**

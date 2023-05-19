@@ -12,7 +12,7 @@
 #ifndef __INCLUDE_TEXTURE_HPP__
 #define __INCLUDE_TEXTURE_HPP__
 
-#include "Vector.hpp"
+#include "AeroVector.hpp"
 #include <cstdint>
 #include <functional>
 #include <memory>
