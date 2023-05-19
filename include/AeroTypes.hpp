@@ -15,6 +15,7 @@
 #include <string>
 
 #define AUIui unsigned int
+#define AUIuint8 unsigned char
 
 namespace AeroUI {
 struct AeroEnumHelper {
