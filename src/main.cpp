@@ -4,6 +4,7 @@
 
 #include "Core/AeroWindow.hpp"
 #include "Input/AeroInput.hpp"
+#include "AeroTypes.hpp"
 
 #include <iostream>
 

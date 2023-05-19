@@ -12,6 +12,8 @@
 #ifndef __INCLUDE_AERO_TYPES_HPP__
 #define __INCLUDE_AERO_TYPES_HPP__
 
+#include <string>
+
 #define AUIui unsigned int
 
 namespace AeroUI {
@@ -22,7 +24,7 @@ struct AeroEnumHelper {
     template<typename T>
     static std::string aero_etos(T*); // Enum to String
 
-    template<typename T, V>
+    template<typename T, typename V>
     static T aero_vtoe(V*); // Value to Enum
 };
 }
