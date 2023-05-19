@@ -9,8 +9,8 @@
  * 
  */
 
-#include "include/AeroIcon.hpp"
-#include "include/AeroColour.hpp"
+#include "AeroIcon.hpp"
+#include "AeroColour.hpp"
 #include "AeroTexture.hpp"
 #include <cstring>
 
