@@ -8,7 +8,7 @@ LIBS := `pkg-config --cflags --libs --static glfw3` `pkg-config --libs --cflags 
 all: build
 
 build:
-	g++ $(CFLAGS) $(LIBS) src/main.cpp $(LDFLAGS)
+	g++ $(CFLAGS) $(LIBS) src/*.cpp $(LDFLAGS)
 
 clean:
 	rm a.out

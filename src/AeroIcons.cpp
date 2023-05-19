@@ -86,7 +86,7 @@ namespace AeroUI {
         for(uint32_t y = 0; y < height; y++) {
             for(uint32_t x = 0; x < width; x++) {
                 const uint32_t pos = x + y * width;
-                const char ch = data[pos];
+                const char ch = Data[pos];
                 color col;
 
                 switch(ch) {
