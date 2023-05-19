@@ -16,7 +16,8 @@
 #include <GLFW/glfw3.h>
 
 #include "AeroTypes.hpp"
-#include "vector.hpp"
+#include "AeroVector.hpp"
+#include "UI/Layouts/AeroLayout.hpp"
 
 #ifdef AUI_NO_DEPRECATION
 #   define GL_SILENCE_DEPRECATION
@@ -66,6 +67,9 @@ protected:
     // Security Handler
     const bool aero_request_calls() noexcept;
     const bool aero_check_all() noexcept;
+    // UI Managaer
+    void aero_apply_lap() noexcept;
+    void aero_add_layout(const AeroLayoutManager&) noexcept;
 public:
     // Public operator methods
     bool operator == (const AeroInternalWindow&);
