@@ -1,7 +1,7 @@
 /**
- * @file window.hpp
+ * @file AeroInternalWindow.hpp
  * @author Mustafa Malik
- * @brief windowing
+ * @brief 
  * @version 0.1
  * @date 2023-05-17
  * 
@@ -9,17 +9,97 @@
  * 
  */
 
-#ifndef __INCLUDE_CORE_WINDOW_HPP__
-#define __INCLUDE_CORE_WINDOW_HPP__
+#ifndef __INCLUDE_CORE_AEROWINDOW_HPP__
+#define __INCLUDE_CORE_AEROWINDOW_HPP__
 
-#include "AeroInternalWindow.hpp"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
+#include <vector>
+
+#include "AeroTypes.hpp"
+#include "AeroVector.hpp"
+#include "UI/Layouts/AeroLayout.hpp"
+
+#ifdef AUI_NO_DEPRECATION
+#   define GL_SILENCE_DEPRECATION
+#else
+#   warning Deprecations warnings may appear, to silence, define AUI_NO_DEPRECATION
+#endif
+
+#ifdef AUI_DEBUG_MODE
+// TODO: Window Logging
+#   define AUI_WINDOW_LOG(__msg)
+#else
+#   define AUI_WINDOW_LOG(__msg)
+#endif
+
+#if __cplusplus < 201103
+#   error Please use a modern C++ compiler from C++11 or above
+#endif
+
+#define DEFAULT_WINDOW_WIDTH    1080
+#define DEFAULT_WINDOW_HEIGHT   720
+
+#define RENDER_THRESHOLD_RATE   60
+#define RENDER_DEFAULT_COLOUR   0x000000 // RR GG BB format
 
 namespace AeroUI {
 
-class AeroInternalWindow;
+// TODO: Requires documentation
 
-class AeroWindow : private AeroInternalWindow { };
+class AeroWindow {
+public:
+    AUIui __window_id = 0;
+    std::vector<AUIui> __intents;
+    bool __polling = false;
+public:
+    AeroWindow();
+    ~AeroWindow();
+
+    AeroWindow(AeroWindow&);
+    AeroWindow operator = (AeroWindow);
+public:
+// Window system
+    bool aero_init_window(const int&, const int&, const char*);
+    bool aero_set_window_icon(); // TODO: NEEDS KRISH'S IMAGE CODE
+    bool aero_should_close() const; 
+
+    void aero_close_window() const noexcept;
+    void aero_set_close_handler(void*) noexcept;
+    void aero_set_window_intent(const AUIui&) noexcept;
+
+// Input system
+    void aero_poll_all() noexcept;
+// Security Handler
+    const bool aero_request_calls() noexcept;
+    const bool aero_check_all() noexcept;
+// UI Managaer
+    void aero_apply_lap() noexcept;
+    void aero_add_layout(const AeroLayoutManager&) noexcept;
+public:
+// Public operator methods
+    bool operator == (const AeroWindow&);
+    bool operator != (const AeroWindow&);
+public:
+// Public methods
+    const AUIui aero_get_window_id() const noexcept;
+    const AeroWindow aero_get_window() const noexcept;
+
+    const vector aero_get_window_pos() const noexcept;
+    const vector aero_get_window_size() const noexcept;
+
+    const int aero_get_x_pos() const noexcept;
+    const int aero_get_y_pos() const noexcept;
+
+    const int aero_get_window_width() const noexcept;
+    const int aero_get_window_height() const noexcept;
+
+    const bool aero_load_theme(const char*); // load from file (e.g THEME.aui)
+
+    const std::vector<AUIui> aero_get_window_intents() const noexcept;
+};
 
 }
 
-#endif /* __INCLUDE_CORE_WINDOW_HPP__ */
+#endif /* __INCLUDE_CORE_AEROWINDOW_HPP__ */
