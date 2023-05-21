@@ -61,43 +61,43 @@ public:
     AeroWindow operator = (AeroWindow);
 public:
 // Window system
-    bool aero_init_window(const int&, const int&, const char*);
-    bool aero_set_window_icon(); // TODO: NEEDS KRISH'S IMAGE CODE
-    bool aero_should_close() const; 
+    bool initWindow(const int&, const int&, const char*);
+    bool setWindowIcon(); // TODO: NEEDS KRISH'S IMAGE CODE
+    bool shouldClose() const; 
 
-    void aero_close_window() const noexcept;
-    void aero_set_close_handler(void*) noexcept;
-    void aero_set_window_intent(const AUIui&) noexcept;
+    void closeWindow() const noexcept;
+    void setCloseHandler(void*) noexcept;
+    void setWindowIntent(const AUIui&) noexcept;
 
 // Input system
-    void aero_poll_all() noexcept;
+    void pollAll() noexcept;
 // Security Handler
-    const bool aero_request_calls() noexcept;
-    const bool aero_check_all() noexcept;
-// UI Managaer
-    void aero_apply_lap() noexcept;
-    void aero_add_layout(const AeroLayoutManager&) noexcept;
+    const bool requestCalls() noexcept;
+    const bool checkAll() noexcept;
+// UI Manager
+    void applyLap() noexcept;
+    void addLayout(const AeroLayoutManager&) noexcept;
 public:
 // Public operator methods
     bool operator == (const AeroWindow&);
     bool operator != (const AeroWindow&);
 public:
 // Public methods
-    const AUIui aero_get_window_id() const noexcept;
-    const AeroWindow aero_get_window() const noexcept;
+    const AUIui getWindowID() const noexcept;
+    const AeroWindow getWindow() const noexcept;
 
-    const vector aero_get_window_pos() const noexcept;
-    const vector aero_get_window_size() const noexcept;
+    const vector getWindowPos() const noexcept;
+    const vector getWindowSize() const noexcept;
 
-    const int aero_get_x_pos() const noexcept;
-    const int aero_get_y_pos() const noexcept;
+    const int getX() const noexcept;
+    const int getY() const noexcept;
 
-    const int aero_get_window_width() const noexcept;
-    const int aero_get_window_height() const noexcept;
+    const int getWindowWidth() const noexcept;
+    const int getWindowHeight() const noexcept;
 
-    const bool aero_load_theme(const char*); // load from file (e.g THEME.aui)
+    const bool loadTheme(const char*); // load from file (e.g THEME.aui)
 
-    const std::vector<AUIui> aero_get_window_intents() const noexcept;
+    const std::vector<AUIui> getWindowIntents() const noexcept;
 };
 
 }

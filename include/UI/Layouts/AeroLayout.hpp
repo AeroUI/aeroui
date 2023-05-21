@@ -14,7 +14,16 @@
 
 namespace AeroUI {
 
-class AeroLayoutManager { };
+class AeroLayoutManager {
+public:
+    AeroLayoutManager() = default;
+    virtual ~AeroLayoutManager() = default;
+public:
+    // Widget controls
+    virtual void add(); // param requires widget
+    virtual void remove(); // param requires widget
+    virtual void render(); // param required widget
+};
 
 }
 
