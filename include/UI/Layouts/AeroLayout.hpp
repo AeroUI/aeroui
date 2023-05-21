@@ -28,6 +28,18 @@ public:
     virtual void render(const AeroWidget&);
     
     virtual const std::vector<AeroWidget> getWidgets();
+    
+    virtual const int getLayoutX() const noexcept;
+    virtual const int getLayoutY() const noexcept;
+    
+    virtual const int getLayoutWidth() const noexcept;
+    virtual const int getLayoutHeight() const noexcept;
+    
+    virtual const int getWidgetX(const AeroWidget&) const noexcept;
+    virtual const int getWidgetY(const AeroWidget&) const noexcept;
+    
+    virtual const int getWidgetWidthInLayout(const AeroWidget&) const noexcept;
+    virtual const int getWidgetHeightInLayout(const AeroWidget&) const noexcept;
 };
 
 }
