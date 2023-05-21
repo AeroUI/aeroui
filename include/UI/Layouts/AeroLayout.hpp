@@ -12,6 +12,9 @@
 #ifndef __INCLUDE_AERO_LAYOUT_HPP__
 #define __INCLUDE_AERO_LAYOUT_HPP__
 
+#include <vector>
+#include "Core/AeroWidget.hpp"
+
 namespace AeroUI {
 
 class AeroLayoutManager {
@@ -20,9 +23,11 @@ public:
     virtual ~AeroLayoutManager() = default;
 public:
     // Widget controls
-    virtual void add(); // param requires widget
-    virtual void remove(); // param requires widget
-    virtual void render(); // param required widget
+    virtual void add(const AeroWidget&);
+    virtual void remove(const AeroWidget&);
+    virtual void render(const AeroWidget&);
+    
+    virtual const std::vector<AeroWidget> getWidgets();
 };
 
 }
