@@ -40,6 +40,14 @@ public:
     
     virtual const int getWidgetWidthInLayout(const AeroWidget&) const noexcept;
     virtual const int getWidgetHeightInLayout(const AeroWidget&) const noexcept;
+    
+    virtual void setLayoutSize(const int&, const int&) noexcept;
+    virtual void setLayoutWidth(const int&) noexcept;
+    virtual void setLayoutHeight(const int&) noexcept;
+    
+    virtual void setLayoutPos(const int&, const int&) noexcept;
+    virtual void setLayoutX(const int&) noexcept;
+    virtual void setLayoutY(const int&) noexcept;
 };
 
 }
