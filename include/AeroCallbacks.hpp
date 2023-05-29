@@ -32,9 +32,9 @@ namespace AeroUI {
     typedef std::function<void()> onEmptySignature;
     typedef std::function<void(const Container&)> onContainerSignature;
     typedef std::function<void(const Control&)> onControlSignature;
-    typedef std::function<void(std::shared_ptr<Control>, InvalidType)> OnInvalidateSignature;
-    typedef std::function<void(const ScrollBar&)> OnScrollBarSignature;
-    typedef std::function<void(TextSelectable&)> OnTextSelectableSignature;
-    typedef std::function<void(Tree&)> OnTreeSignature;
+    typedef std::function<void(std::shared_ptr<Control>, InvalidType)> onInvalidateSignature;
+    typedef std::function<void(const ScrollBar&)> onScrollBarSignature;
+    typedef std::function<void(TextSelectable&)> onTextSelectableSignature;
+    typedef std::function<void(Tree&)> onTreeSignature;
 
 }
