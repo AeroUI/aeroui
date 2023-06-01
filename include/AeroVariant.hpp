@@ -57,5 +57,13 @@ namespace AeroUI {
         variant& operator=(const variant& value);
         variant& operator=(variant&& value);
 
+        bool Bool(bool Or = false) const;
+        unsigned char byte(unsigned char Or = 0) const;
+        int Int(int Or = 0) const;
+        float Float(float Or = 0.0f) const;
+        const char* String(const char* Or = "") const;
+        vector Vector(const vector& Or = {}) const;
+        color toColor(const color& Or = {}) const;
+
     };
 }
