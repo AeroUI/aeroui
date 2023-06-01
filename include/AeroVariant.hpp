@@ -65,5 +65,37 @@ namespace AeroUI {
         vector Vector(const vector& Or = {}) const;
         color toColor(const color& Or = {}) const;
 
+        bool isNull() const;
+        bool isBool() const;
+        bool isByte() const;
+        bool isInt() const;
+        bool isFloat() const;
+        bool isString() const;
+        bool isVector() const;
+        bool isColor() const;
+
+        Type getType() const;
+        std::string toString() const;
+    
+    private:
+        union Data {
+            bool Bool;
+            unsigned char byte;
+            int Int;
+            float Float; 
+            std::string* String;
+            vector Vector;
+            color Col;
+        };
+
+        void copy(const json&);
+        void copy(const variant&);
+        void move(variant&&);
+        void clear();
+
+        Type m_type { Type::Null };
+        Data m_Data {};
+
+
     };
 }
